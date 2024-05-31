@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Week1  Day1 生病在家躺着，别提了。\color{white}{\texttt{生病在家躺着，别提了。}}生病在家躺着，别提了。  Day两 下午来学校，做了一会早上的比赛题然后就去洛谷找题做了。 晚上边咳嗽边跑两圈，感觉要死了。  Day3 今天学强连通分量，本蒟蒻觉得自己不会，就拿老师的模版代码自己加了点注释，在 oiclass 发了一个帖问大家是不是这样，不过没人回只有人膜。做了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TYOI Class C 2023夏令营 油寄">
+<meta property="og:url" content="http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/index.html">
+<meta property="og:site_name" content="44_FeiDing&#39;s Blog">
+<meta property="og:description" content="Week1  Day1 生病在家躺着，别提了。\color{white}{\texttt{生病在家躺着，别提了。}}生病在家躺着，别提了。  Day两 下午来学校，做了一会早上的比赛题然后就去洛谷找题做了。 晚上边咳嗽边跑两圈，感觉要死了。  Day3 今天学强连通分量，本蒟蒻觉得自己不会，就拿老师的模版代码自己加了点注释，在 oiclass 发了一个帖问大家是不是这样，不过没人回只有人膜。做了">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/umw7mfqp.png">
+<meta property="article:published_time" content="2023-08-26T01:57:00.000Z">
+<meta property="article:modified_time" content="2024-05-31T12:24:15.429Z">
+<meta property="article:author" content="44_FeiDing">
+<meta property="article:tag" content="History in Time">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/image_hosting/umw7mfqp.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>TYOI Class C 2023夏令营 油寄</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2023/09/16/History%20in%20Time/2023-CSP-J-S-%E7%AC%AC%E4%B8%80%E8%BD%AE-%E6%B2%B9%E5%AF%84/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&text=TYOI Class C 2023夏令营 油寄"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&title=TYOI Class C 2023夏令营 油寄"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&is_video=false&description=TYOI Class C 2023夏令营 油寄"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=TYOI Class C 2023夏令营 油寄&body=Check out this article: http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&title=TYOI Class C 2023夏令营 油寄"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&title=TYOI Class C 2023夏令营 油寄"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&title=TYOI Class C 2023夏令营 油寄"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&title=TYOI Class C 2023夏令营 油寄"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&name=TYOI Class C 2023夏令营 油寄&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&t=TYOI Class C 2023夏令营 油寄"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#week1"><span class="toc-number">1.</span> <span class="toc-text"> Week1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#day1"><span class="toc-number">1.1.</span> <span class="toc-text"> Day1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day%E4%B8%A4"><span class="toc-number">1.2.</span> <span class="toc-text"> Day两</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3"><span class="toc-number">1.3.</span> <span class="toc-text"> Day3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4"><span class="toc-number">1.4.</span> <span class="toc-text"> Day4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5"><span class="toc-number">1.5.</span> <span class="toc-text"> Day5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6"><span class="toc-number">1.6.</span> <span class="toc-text"> Day6</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#week%E4%B8%A4"><span class="toc-number">2.</span> <span class="toc-text"> Week两</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#day1-2"><span class="toc-number">2.1.</span> <span class="toc-text"> Day1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day%E4%B8%A4-2"><span class="toc-number">2.2.</span> <span class="toc-text"> Day两</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3-2"><span class="toc-number">2.3.</span> <span class="toc-text"> Day3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4-2"><span class="toc-number">2.4.</span> <span class="toc-text"> Day4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5-2"><span class="toc-number">2.5.</span> <span class="toc-text"> Day5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6-2"><span class="toc-number">2.6.</span> <span class="toc-text"> Day6</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#week3"><span class="toc-number">3.</span> <span class="toc-text"> Week3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#day1-3"><span class="toc-number">3.1.</span> <span class="toc-text"> Day1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day2"><span class="toc-number">3.2.</span> <span class="toc-text"> Day2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3-3"><span class="toc-number">3.3.</span> <span class="toc-text"> Day3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4-3"><span class="toc-number">3.4.</span> <span class="toc-text"> Day4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5-3"><span class="toc-number">3.5.</span> <span class="toc-text"> Day5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6-3"><span class="toc-number">3.6.</span> <span class="toc-text"> Day6</span></a></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        TYOI Class C 2023夏令营 油寄
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">44_FeiDing</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-08-26T01:57:00.000Z" class="dt-published" itemprop="datePublished">2023-08-26</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/History-in-Time/" rel="tag">History in Time</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="week1"><a class="markdownIt-Anchor" href="#week1"></a> Week1</h2>
+<h3 id="day1"><a class="markdownIt-Anchor" href="#day1"></a> Day1</h3>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="white"><mtext mathvariant="monospace">生病在家躺着，别提了。</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{white}{\texttt{生病在家躺着，别提了。}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord" style="color:white;"><span class="mord text" style="color:white;"><span class="mord texttt cjk_fallback" style="color:white;">生病在家躺着，别提了。</span></span></span></span></span></span></p>
+<h3 id="day两"><a class="markdownIt-Anchor" href="#day两"></a> Day两</h3>
+<p>下午来学校，做了一会早上的比赛题然后就去洛谷找题做了。</p>
+<p>晚上边咳嗽边跑两圈，<s>感觉要死了</s>。</p>
+<h3 id="day3"><a class="markdownIt-Anchor" href="#day3"></a> Day3</h3>
+<p>今天学强连通分量，本蒟蒻觉得自己不会，就拿老师的模版代码自己加了点注释，在 oiclass 发了一个<a target="_blank" rel="noopener" href="http://oiclass.com/d/puji/discuss/64d2f5223f87425ba26c2525#1691722265305">帖</a>问大家是不是这样，不过没人回<s>只有人膜</s>。做了两题之后觉得挺简单的，<s>不就是 dfs 和两个 if 嘛</s>，那我理解得应该没问题。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">tarjan</span><span class="params">(<span class="type">int</span> u)</span></span>&#123;</span><br><span class="line">	dfn[u]=low[u]=++index;<span class="comment">//编号</span></span><br><span class="line">	s.<span class="built_in">push</span>(u);</span><br><span class="line">	inStack[u]=<span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;G[u].<span class="built_in">size</span>();++i)&#123;</span><br><span class="line">		<span class="type">int</span> v=G[u][i];<span class="comment">//new</span></span><br><span class="line">		<span class="keyword">if</span>(dfn[v]==<span class="number">-1</span>)&#123;<span class="comment">//未访问</span></span><br><span class="line">			<span class="built_in">tarjan</span>(v);<span class="comment">//dfs</span></span><br><span class="line">			low[u]=<span class="built_in">min</span>(low[u],low[v]);<span class="comment">//回溯</span></span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;<span class="comment">//已访问</span></span><br><span class="line">			<span class="keyword">if</span>(inStack[v])&#123;<span class="comment">//绕了一圈又回来了（强连通）</span></span><br><span class="line">				low[u]=<span class="built_in">min</span>(low[u],dfn[v]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(dfn[u]==low[u])&#123;<span class="comment">//无后向边</span></span><br><span class="line">		c++;<span class="comment">//强连通分量的编号</span></span><br><span class="line">		<span class="type">int</span> v;</span><br><span class="line">		<span class="keyword">do</span>&#123;</span><br><span class="line">			v=s.<span class="built_in">top</span>();</span><br><span class="line">			s.<span class="built_in">pop</span>();			<span class="comment">//把自己的子树pop</span></span><br><span class="line">			scc[v]=c;</span><br><span class="line">			inStack[v]=<span class="literal">false</span>;</span><br><span class="line">		&#125;<span class="keyword">while</span>(u!=v);			<span class="comment">//把自己pop</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>还是咳个不停，所以晚上回家。</p>
+<h3 id="day4"><a class="markdownIt-Anchor" href="#day4"></a> Day4</h3>
+<p>今天的比赛第一题就是个贪心红题，T两 本来老师想考我们高精度 sqrt ，结果数据只有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>20</mn></msup></mrow><annotation encoding="application/x-tex">10^{20}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span> 被我们用 unsigned long long 和 long double 卡过，T3 判断条件写错，只要数据里有 1 3 2 这类子序列就会挂，还好数据淼只少了十分。T4 后来看好像一个容斥加数学，我怎么可能会，于是就前面的数据用暴力，后面 rand() 50pts。赛后发现删掉 rand() 那部分代码 70pts 当场裂开。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="white"><mrow><mtext mathvariant="monospace">三周后的我：哇只挂了</mtext><mtext> </mtext><mtext mathvariant="monospace">两十</mtext><mtext> </mtext><mtext mathvariant="monospace">分我好强啊。</mtext></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{white}\texttt{三周后的我：哇只挂了 两十 分我好强啊。}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord text" style="color:white;"><span class="mord texttt cjk_fallback" style="color:white;">三周后的我：哇只挂了</span><span class="mord texttt" style="color:white;"> </span><span class="mord texttt cjk_fallback" style="color:white;">两十</span><span class="mord texttt" style="color:white;"> </span><span class="mord texttt cjk_fallback" style="color:white;">分我好强啊。</span></span></span></span></span></p>
+<p>下午改完题发现了<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T364320">这道题</a>，玩了好一会，又去随机跳题加了几道题到任务计划里<s>但可是一道没做</s>。</p>
+<p>终于能在学校住宿了，我的床太软了，仰着的时候屁股陷下去很不舒服。</p>
+<p>晚上聊了一堆好玩的东西，UTC15:30 才睡。</p>
+<h3 id="day5"><a class="markdownIt-Anchor" href="#day5"></a> Day5</h3>
+<p>割点与桥，加强版Tarjan，没什么的就不说了。</p>
+<p>晚上打了<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/contest/121028">比赛</a>，开幕雷击：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/umw7mfqp.png" alt="" /></p>
+<p>P的，CF只有在你得到正Rating时才会有这个牌子。</p>
+<p>不过<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/B3815">麻辣兔头</a>尝起来很不错。</p>
+<p>晚上熄灯后趁他们聊天时背下了《般若波罗蜜多心经》</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">观自在菩萨</span><br><span class="line">行深般若波罗蜜多时</span><br><span class="line">照见五蕴皆空</span><br><span class="line">度一切苦厄</span><br><span class="line">舍利子</span><br><span class="line">色不异空</span><br><span class="line">空不异色</span><br><span class="line">色即是空</span><br><span class="line">空即是色</span><br><span class="line">受想行识</span><br><span class="line">亦复如是</span><br><span class="line">舍利子</span><br><span class="line">是诸法空相</span><br><span class="line">不生不灭</span><br><span class="line">不垢不净</span><br><span class="line">不增不减</span><br><span class="line">是故空中无色</span><br><span class="line">无受想行识</span><br><span class="line">无眼耳鼻舌身意</span><br><span class="line">无色声香味触法</span><br><span class="line">无眼界</span><br><span class="line">乃至无意识界</span><br><span class="line">无无明</span><br><span class="line">亦无无明尽</span><br><span class="line">乃至无老死</span><br><span class="line">亦无老死尽</span><br><span class="line">无苦集灭道</span><br><span class="line">无智亦无得</span><br><span class="line">以无所得故</span><br><span class="line">菩提萨埵</span><br><span class="line">依般若波罗蜜多故</span><br><span class="line">心无罣碍</span><br><span class="line">无罣碍故</span><br><span class="line">无有恐怖</span><br><span class="line">远离颠倒梦想</span><br><span class="line">究竟涅磐</span><br><span class="line">三世诸佛</span><br><span class="line">依般若波罗蜜多故</span><br><span class="line">得阿耨多罗三藐三菩提</span><br><span class="line">故知般若波罗蜜多</span><br><span class="line">是大神咒</span><br><span class="line">是大明咒</span><br><span class="line">是无上咒</span><br><span class="line">是无等等咒</span><br><span class="line">能除一切苦</span><br><span class="line">真实不虚</span><br><span class="line">故说般若波罗蜜多咒</span><br><span class="line">即说咒曰:</span><br><span class="line">揭谛揭谛</span><br><span class="line">波罗揭谛</span><br><span class="line">波罗僧揭谛</span><br><span class="line">菩提萨婆诃</span><br><span class="line">揭谛揭谛</span><br><span class="line">波罗揭谛</span><br><span class="line">波罗僧揭谛</span><br><span class="line">菩提萨婆诃</span><br><span class="line">揭谛揭谛</span><br><span class="line">波罗揭谛</span><br><span class="line">波罗僧揭谛</span><br><span class="line">菩提萨婆诃</span><br></pre></td></tr></table></figure>
+<h3 id="day6"><a class="markdownIt-Anchor" href="#day6"></a> Day6</h3>
+<p>早上的比赛大挂分榜倒一，T3 理解错题意寄，T2 化简为繁寄。</p>
+<p>下午<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/contest/123900#description">打比赛</a>，太多速通高手，我被打爆了。</p>
+<p>回到家爆肝MC两个小时半，本来要骑驴去沙漠探险的，结果玩着玩着就去玩了飞行模组，找了半个小时不知道怎么加油，怒砸电脑。</p>
+<h2 id="week两"><a class="markdownIt-Anchor" href="#week两"></a> Week两</h2>
+<h3 id="day1-2"><a class="markdownIt-Anchor" href="#day1-2"></a> Day1</h3>
+<p>橙名啦！</p>
+<p>早上写了一个<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T366848">0+1 problem</a>。</p>
+<p>并查集太简单了。就是一个图论版小递归。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for(int i=1;i&lt;=n;++i)</span><br><span class="line">		fa[i]=i;</span><br><span class="line"></span><br><span class="line">int find(int n)&#123;</span><br><span class="line">	if(fa[n]==n)</span><br><span class="line">		return n;</span><br><span class="line">	return fa[n]=find(fa[n]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我似乎晚上什么也没干。</p>
+<h3 id="day两-2"><a class="markdownIt-Anchor" href="#day两-2"></a> Day两</h3>
+<p>何致远奆佬给我们出了一个非常简单的比赛，估计蓝蓝紫紫橙，最后6坤分加道签到题总算推出数学公式。<s>学长真良心</s>。</p>
+<h3 id="day3-2"><a class="markdownIt-Anchor" href="#day3-2"></a> Day3</h3>
+<p>T3 DP 初始值搞错，T两 算错复杂度。</p>
+<p>T3 赛时：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> x,y,z;</span><br><span class="line"><span class="type">int</span> a[<span class="number">102</span>],b[<span class="number">102</span>],c[<span class="number">102</span>],f[<span class="number">102</span>][<span class="number">102</span>][<span class="number">102</span>];</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cin&gt;&gt;x&gt;&gt;y&gt;&gt;z;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=x;i&gt;=<span class="number">1</span>;--i)&#123;</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=y;i&gt;=<span class="number">1</span>;--i)&#123;</span><br><span class="line">		cin&gt;&gt;b[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=z;i&gt;=<span class="number">1</span>;--i)&#123;</span><br><span class="line">		cin&gt;&gt;c[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=x;++i)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=y;++j)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">1</span>;k&lt;=z;++k)&#123;</span><br><span class="line">				f[i][j][k]=<span class="built_in">max</span>(f[i][j][k],f[i][j][k<span class="number">-1</span>]+(i+j+k)*c[k]);</span><br><span class="line">				f[i][j][k]=<span class="built_in">max</span>(f[i][j][k],f[i][j<span class="number">-1</span>][k]+(i+j+k)*b[k]);</span><br><span class="line">				f[i][j][k]=<span class="built_in">max</span>(f[i][j][k],f[i<span class="number">-1</span>][j][k]+(i+j+k)*a[k]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;f[x][y][z];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>正解：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI pair<span class="string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MP(u,v) make_pair((u),(v))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> R register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> U unsigned</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> IL inline</span></span><br><span class="line"><span class="comment">//#define int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> INF=<span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mod=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">1e2</span>+<span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M=<span class="number">1e3</span>;</span><br><span class="line"><span class="type">int</span> x,y,z;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> f[N][N][N][<span class="number">12</span>],a[N][<span class="number">13</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">	n=x+y+z;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=x;i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i][<span class="number">1</span>]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=y;i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i][<span class="number">2</span>]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=z;i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i][<span class="number">3</span>]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=x/<span class="number">2</span>;i++)</span><br><span class="line">		<span class="built_in">swap</span>(a[i][<span class="number">1</span>],a[x-i+<span class="number">1</span>][<span class="number">1</span>]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=y/<span class="number">2</span>;i++)</span><br><span class="line">		<span class="built_in">swap</span>(a[i][<span class="number">2</span>],a[y-i+<span class="number">1</span>][<span class="number">2</span>]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=z/<span class="number">2</span>;i++)</span><br><span class="line">		<span class="built_in">swap</span>(a[i][<span class="number">3</span>],a[z-i+<span class="number">1</span>][<span class="number">3</span>]);</span><br><span class="line">	f[<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>]=a[<span class="number">1</span>][<span class="number">1</span>],f[<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>]=a[<span class="number">1</span>][<span class="number">2</span>],f[<span class="number">0</span>][<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]=a[<span class="number">1</span>][<span class="number">3</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;=<span class="built_in">min</span>(i,x);j++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">0</span>;k&lt;=<span class="built_in">min</span>(i-j,y);k++)&#123;</span><br><span class="line">				<span class="type">int</span> l=i-j-k;</span><br><span class="line">				<span class="keyword">if</span>(j&gt;<span class="number">0</span>)</span><br><span class="line">					f[j][k][l][<span class="number">1</span>]=<span class="built_in">max</span>(f[j][k][l][<span class="number">1</span>],f[j<span class="number">-1</span>][k][l][<span class="number">0</span>]+a[j][<span class="number">1</span>]*i);</span><br><span class="line">				<span class="keyword">if</span>(k&gt;<span class="number">0</span>)</span><br><span class="line">					f[j][k][l][<span class="number">1</span>]=<span class="built_in">max</span>(f[j][k][l][<span class="number">1</span>],f[j][k<span class="number">-1</span>][l][<span class="number">0</span>]+a[k][<span class="number">2</span>]*i);</span><br><span class="line">				<span class="keyword">if</span>(l&gt;<span class="number">0</span>)</span><br><span class="line">					f[j][k][l][<span class="number">1</span>]=<span class="built_in">max</span>(f[j][k][l][<span class="number">1</span>],f[j][k][l<span class="number">-1</span>][<span class="number">0</span>]+a[l][<span class="number">3</span>]*i);</span><br><span class="line">				f[j][k][l][<span class="number">0</span>]=f[j][k][l][<span class="number">1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f[x][y][z][<span class="number">1</span>]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>呜呜呜。</p>
+<h3 id="day4-2"><a class="markdownIt-Anchor" href="#day4-2"></a> Day4</h3>
+<p>基础的最小生成树，就是贪心套并查集，我觉得我半年前都听得懂。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 9   <span class="comment">// 图中边的数量</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> P 6   <span class="comment">// 图中顶点的数量</span></span></span><br><span class="line"><span class="comment">//构建表示边的结构体</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">edge</span> &#123;</span><br><span class="line">    <span class="comment">//一条边有 2 个顶点</span></span><br><span class="line">    <span class="type">int</span> initial;</span><br><span class="line">    <span class="type">int</span> end;</span><br><span class="line">    <span class="comment">//边的权值</span></span><br><span class="line">    <span class="type">int</span> weight;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//qsort排序函数中使用，使edges结构体中的边按照权值大小升序排序</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span>* a, <span class="type">const</span> <span class="type">void</span>* b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span>  ((<span class="keyword">struct</span> edge*)a)-&gt;weight - ((<span class="keyword">struct</span> edge*)b)-&gt;weight;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//克鲁斯卡尔算法寻找最小生成树，edges 存储用户输入的图的各个边，minTree 用于记录组成最小生成树的各个边</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">kruskal_MinTree</span><span class="params">(<span class="keyword">struct</span> edge edges[], <span class="keyword">struct</span> edge minTree[])</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> i, initial, end, elem, k;</span><br><span class="line">    <span class="comment">//每个顶点配置一个标记值</span></span><br><span class="line">    <span class="type">int</span> assists[P];</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//初始状态下，每个顶点的标记都不相同</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; P; i++) &#123;</span><br><span class="line">        assists[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//根据权值，对所有边进行升序排序</span></span><br><span class="line">    <span class="built_in">qsort</span>(edges, N, <span class="built_in">sizeof</span>(edges[<span class="number">0</span>]), cmp);</span><br><span class="line">    <span class="comment">//遍历所有的边</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">        <span class="comment">//找到当前边的两个顶点在 assists 数组中的位置下标</span></span><br><span class="line">        initial = edges[i].initial - <span class="number">1</span>;</span><br><span class="line">        end = edges[i].end - <span class="number">1</span>;</span><br><span class="line">        <span class="comment">//如果顶点位置存在且顶点的标记不同，说明不在一个集合中，不会产生回路</span></span><br><span class="line">        <span class="keyword">if</span> (assists[initial] != assists[end]) &#123;</span><br><span class="line">            <span class="comment">//记录该边，作为最小生成树的组成部分</span></span><br><span class="line">            minTree[num] = edges[i];</span><br><span class="line">            <span class="comment">//计数+1</span></span><br><span class="line">            num++;</span><br><span class="line">            elem = assists[end];</span><br><span class="line">            <span class="comment">//将新加入生成树的顶点标记全部改为一样的</span></span><br><span class="line">            <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; P; k++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (assists[k] == elem) &#123;</span><br><span class="line">                    assists[k] = assists[initial];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//如果选择的边的数量和顶点数相差1，证明最小生成树已经形成，退出循环</span></span><br><span class="line">            <span class="keyword">if</span> (num == P - <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">display</span><span class="params">(<span class="keyword">struct</span> edge minTree[])</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> cost = <span class="number">0</span>, i;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;最小生成树为:\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; P - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d-%d  权值：%d\n&quot;</span>, minTree[i].initial, minTree[i].end, minTree[i].weight);</span><br><span class="line">        cost += minTree[i].weight;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;总权值为：%d&quot;</span>, cost);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">edge</span> edges[N], minTree[P - <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d&quot;</span>, &amp;edges[i].initial, &amp;edges[i].end, &amp;edges[i].weight);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">kruskal_MinTree</span>(edges, minTree);</span><br><span class="line">    <span class="built_in">display</span>(minTree);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Prim 有点难还不会。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 1000</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INF 1&lt;&lt;30</span></span><br><span class="line"><span class="type">int</span> closest[MAXN],lowcost[MAXN],m;<span class="comment">//m为节点的个数</span></span><br><span class="line"><span class="type">int</span> G[MAXN][MAXN];<span class="comment">//邻接矩阵</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">prim</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        lowcost[i] = INF;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        closest[i] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    closest[<span class="number">0</span>] = <span class="number">-1</span>;<span class="comment">//加入第一个点，-1表示该点在集合U中，否则在集合V中</span></span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>,ans = <span class="number">0</span>,e = <span class="number">0</span>;<span class="comment">//e为最新加入集合的点</span></span><br><span class="line">    <span class="keyword">while</span> (num &lt; m<span class="number">-1</span>)<span class="comment">//加入m-1条边</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> micost = INF,miedge = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;m;i++)</span><br><span class="line">        <span class="keyword">if</span>(closest[i] != <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> temp = G[e][i];</span><br><span class="line">            <span class="keyword">if</span>(temp &lt; lowcost[i])</span><br><span class="line">            &#123;</span><br><span class="line">                lowcost[i] = temp;</span><br><span class="line">                closest[i] = e;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(lowcost[i] &lt; micost)</span><br><span class="line">            micost = lowcost[miedge=i];</span><br><span class="line">        &#125;</span><br><span class="line">        ans += micost;</span><br><span class="line">        closest[e = miedge] = <span class="number">-1</span>;</span><br><span class="line">        num++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>狼人杀不知道盗宝偷的技能能持续到白天，痛失赢。</p>
+<h3 id="day5-2"><a class="markdownIt-Anchor" href="#day5-2"></a> Day5</h3>
+<p>下午晚上爆刷16道黄绿题。</p>
+<p>自学以前没学会的 Dijkstra 和 SPFA。</p>
+<h3 id="day6-2"><a class="markdownIt-Anchor" href="#day6-2"></a> Day6</h3>
+<p>第一题想不出来，上个厕所瞬间AC。</p>
+<h2 id="week3"><a class="markdownIt-Anchor" href="#week3"></a> Week3</h2>
+<h3 id="day1-3"><a class="markdownIt-Anchor" href="#day1-3"></a> Day1</h3>
+<p>最小生成树进阶。还行，至少比Prim简单。</p>
+<p>爆切15题，写出第一篇题解。</p>
+<h3 id="day2"><a class="markdownIt-Anchor" href="#day2"></a> Day2</h3>
+<p>看到<a target="_blank" rel="noopener" href="https://gbc.ljcoier.repl.co/gp">新加坡国宝游戏公司</a>,</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">温馨提示（免责声明）：股票有风险，投资须谨慎，此股票为虚假股票，不要当真</span><br><span class="line">股票走向规则，保证随机，可买可卖。</span><br><span class="line">想成功先发疯、不顾一切向钱冲。拼一次富三代、拼命才能不失败。今天睡地板，明天当老板。小孩子才分对错，大人只看输赢。等伤害到自己的利益了又能拿出道德标准拿起对错。只有你们想不到的，没有我们做不了的！！！！</span><br></pre></td></tr></table></figure>
+<h3 id="day3-3"><a class="markdownIt-Anchor" href="#day3-3"></a> Day3</h3>
+<p>下午新初生离开，我们可高兴了，我的“九点两十五分”和“I also”出名了。</p>
+<p>我都不知道我 T1 怎么AC的。</p>
+<h3 id="day4-3"><a class="markdownIt-Anchor" href="#day4-3"></a> Day4</h3>
+<p>这个星期踢足球真开心，就是脚好痛啊。</p>
+<h3 id="day5-3"><a class="markdownIt-Anchor" href="#day5-3"></a> Day5</h3>
+<p>中午终于把<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1462">P1462</a>做完了，提交了5页评测记录。</p>
+<p>T3 long long <code>%d</code>梅开二度挂100。</p>
+<p>下午踢全场，好大啊。</p>
+<h3 id="day6-3"><a class="markdownIt-Anchor" href="#day6-3"></a> Day6</h3>
+<p>写这篇东西写到崩溃，到Week3已经乱写了。</p>
+<hr />
+<p>感觉：上课和比赛总是神游，状态很不好，想好也好不了。但自由做题时就感觉良好。同学们都大大滴好，天天去204玩杀和牌可高兴了。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/probberechts">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#week1"><span class="toc-number">1.</span> <span class="toc-text"> Week1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#day1"><span class="toc-number">1.1.</span> <span class="toc-text"> Day1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day%E4%B8%A4"><span class="toc-number">1.2.</span> <span class="toc-text"> Day两</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3"><span class="toc-number">1.3.</span> <span class="toc-text"> Day3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4"><span class="toc-number">1.4.</span> <span class="toc-text"> Day4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5"><span class="toc-number">1.5.</span> <span class="toc-text"> Day5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6"><span class="toc-number">1.6.</span> <span class="toc-text"> Day6</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#week%E4%B8%A4"><span class="toc-number">2.</span> <span class="toc-text"> Week两</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#day1-2"><span class="toc-number">2.1.</span> <span class="toc-text"> Day1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day%E4%B8%A4-2"><span class="toc-number">2.2.</span> <span class="toc-text"> Day两</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3-2"><span class="toc-number">2.3.</span> <span class="toc-text"> Day3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4-2"><span class="toc-number">2.4.</span> <span class="toc-text"> Day4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5-2"><span class="toc-number">2.5.</span> <span class="toc-text"> Day5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6-2"><span class="toc-number">2.6.</span> <span class="toc-text"> Day6</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#week3"><span class="toc-number">3.</span> <span class="toc-text"> Week3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#day1-3"><span class="toc-number">3.1.</span> <span class="toc-text"> Day1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day2"><span class="toc-number">3.2.</span> <span class="toc-text"> Day2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3-3"><span class="toc-number">3.3.</span> <span class="toc-text"> Day3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4-3"><span class="toc-number">3.4.</span> <span class="toc-text"> Day4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5-3"><span class="toc-number">3.5.</span> <span class="toc-text"> Day5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6-3"><span class="toc-number">3.6.</span> <span class="toc-text"> Day6</span></a></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&text=TYOI Class C 2023夏令营 油寄"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&title=TYOI Class C 2023夏令营 油寄"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&is_video=false&description=TYOI Class C 2023夏令营 油寄"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=TYOI Class C 2023夏令营 油寄&body=Check out this article: http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&title=TYOI Class C 2023夏令营 油寄"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&title=TYOI Class C 2023夏令营 油寄"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&title=TYOI Class C 2023夏令营 油寄"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&title=TYOI Class C 2023夏令营 油寄"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&name=TYOI Class C 2023夏令营 油寄&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/08/26/History%20in%20Time/TYOI-Class-C-2023%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/&t=TYOI Class C 2023夏令营 油寄"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    44_FeiDing
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
