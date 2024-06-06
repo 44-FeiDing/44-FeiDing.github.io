@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="思路 在不考虑能否构成三角形的情况下，三角形有这几种情况：  三条边的长度各不相等； 等腰，其中腰比底长； 等腰，其中底比腰长； 等边三角形。  题目中木棍的长度都是 222 的幂，我们再对上述几种情况作进一步分析：  无法构成三角形。为了构成三角形，我们要让较短的 222 条木棍尽量长，则三个木棍的长度为 2x,2x+1,2x+22^x,2^{x+1},2^{x+2}2x,2x+1,2x+2，明">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CF1922B题解">
+<meta property="og:url" content="http://example.com/2024/01/21/CF1922B%E9%A2%98%E8%A7%A3/index.html">
+<meta property="og:site_name" content="44_FeiDing&#39;s Blog">
+<meta property="og:description" content="思路 在不考虑能否构成三角形的情况下，三角形有这几种情况：  三条边的长度各不相等； 等腰，其中腰比底长； 等腰，其中底比腰长； 等边三角形。  题目中木棍的长度都是 222 的幂，我们再对上述几种情况作进一步分析：  无法构成三角形。为了构成三角形，我们要让较短的 222 条木棍尽量长，则三个木棍的长度为 2x,2x+1,2x+22^x,2^{x+1},2^{x+2}2x,2x+1,2x+2，明">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-01-21T03:41:16.000Z">
+<meta property="article:modified_time" content="2024-06-06T07:51:08.281Z">
+<meta property="article:author" content="44_FeiDing">
+<meta property="article:tag" content="Solution">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2024/01/21/CF1922B%E9%A2%98%E8%A7%A3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/01/21/CF1922B%E9%A2%98%E8%A7%A3/","path":"2024/01/21/CF1922B题解/","title":"CF1922B题解"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CF1922B题解 | 44_FeiDing's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">44_FeiDing's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">a weak OIer</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">44_FeiDing</p>
+  <div class="site-description" itemprop="description">rubish hub</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/44-FeiDing" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;44-FeiDing" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:d_44_feiding@163.com" title="E-Mail → mailto:d_44_feiding@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/21/CF1922B%E9%A2%98%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="44_FeiDing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="44_FeiDing's Blog">
+      <meta itemprop="description" content="rubish hub">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CF1922B题解 | 44_FeiDing's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CF1922B题解
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-01-21 11:41:16" itemprop="dateCreated datePublished" datetime="2024-01-21T11:41:16+08:00">2024-01-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-06 15:51:08" itemprop="dateModified" datetime="2024-06-06T15:51:08+08:00">2024-06-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="思路">思路</h1>
+<p>在不考虑能否构成三角形的情况下，三角形有这几种情况：</p>
+<ol>
+<li>三条边的长度各不相等；</li>
+<li>等腰，其中腰比底长；</li>
+<li>等腰，其中底比腰长；</li>
+<li>等边三角形。</li>
+</ol>
+<p>题目中木棍的长度都是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 的幂，我们再对上述几种情况作进一步分析：</p>
+<ol>
+<li>无法构成三角形。为了构成三角形，我们要让较短的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 条木棍尽量长，则三个木棍的长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>x</mi></msup><mo separator="true">,</mo><msup><mn>2</mn><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup><mo separator="true">,</mo><msup><mn>2</mn><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^x,2^{x+1},2^{x+2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="mbin mtight">+</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span>，明显构不成三角形。</li>
+<li>很明显可以构成三角形。</li>
+<li>无法构成三角形。两条腰长度之和最大也只能等于底。</li>
+<li>很明显可以构成三角形。</li>
+</ol>
+<span id="more"></span>
+<hr>
+<h1 id="实现">实现</h1>
+<p>经分析只有下面 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 种三角形：</p>
+<ol>
+<li>等腰，其中腰比底长；</li>
+<li>等边三角形。</li>
+</ol>
+<p>于是这么做：</p>
+<p>首先桶排，因为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>≤</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">a_i \le n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7859700000000001em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>，所以可以桶排。</p>
+<p>设长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">2^x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span></span></span></span></span></span></span></span> 的木棍有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">b_x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 根，则上述两种三角形的方案数分别为：</p>
+<ol>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="1.44em"><msubsup><mo>∑</mo><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo stretchy="false">(</mo><msubsup><mi>C</mi><msub><mi>b</mi><mi>x</mi></msub><mn>2</mn></msubsup><mo>×</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></msubsup><msub><mi>b</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\Large\sum_{x=1}^n (C^2_{b_x}\times \sum_{i=1}^{x-1} b_x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.71928em;vertical-align:-0.5521199999999999em;"></span><span class="mop sizing reset-size6 size8"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7809444444444444em;"><span style="top:-2.7152677777777776em;margin-left:0em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.4819444444444443em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2847322222222222em;"><span></span></span></span></span></span></span><span class="mopen sizing reset-size6 size8">(</span><span class="mord sizing reset-size6 size8"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8105277777777777em;"><span style="top:-2.72075em;margin-left:-0.07153em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.363em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.38341666666666663em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin sizing reset-size6 size8">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.7484544em;vertical-align:-0.4100144em;"></span><span class="mop sizing reset-size6 size8"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9294722222222223em;"><span style="top:-2.7152677777777776em;margin-left:0em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.4819444444444447em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2847322222222222em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord sizing reset-size6 size8"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.149em;"><span style="top:-2.85em;margin-left:0em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose sizing reset-size6 size8">)</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="1.44em"><msubsup><mo>∑</mo><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo stretchy="false">(</mo><msubsup><mi>C</mi><msub><mi>b</mi><mi>x</mi></msub><mn>3</mn></msubsup><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\Large\sum_{x=1}^n (C^3_{b_x})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.71928em;vertical-align:-0.5521199999999999em;"></span><span class="mop sizing reset-size6 size8"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7809444444444444em;"><span style="top:-2.7152677777777776em;margin-left:0em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.4819444444444443em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2847322222222222em;"><span></span></span></span></span></span></span><span class="mopen sizing reset-size6 size8">(</span><span class="mord sizing reset-size6 size8"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8105277777777777em;"><span style="top:-2.72075em;margin-left:-0.07153em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.363em;margin-right:0.034722222222222224em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size8 size6 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.38341666666666663em;"><span></span></span></span></span></span></span><span class="mclose sizing reset-size6 size8">)</span></span></span></span></li>
+</ol>
+<hr>
+<p>code:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#define int long long</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int t,n,ans;</span><br><span class="line">int a[300002],b[300002],c[300002];</span><br><span class="line"></span><br><span class="line">//a 是每个木棍的长度</span><br><span class="line">//b 是桶</span><br><span class="line">//c 是 b 的前缀和</span><br><span class="line"></span><br><span class="line">signed main()&#123;</span><br><span class="line">	cin&gt;&gt;t;</span><br><span class="line">	while(t--)&#123;</span><br><span class="line">		ans=0;</span><br><span class="line">		memset(b,0,sizeof(b));</span><br><span class="line">		cin&gt;&gt;n;</span><br><span class="line">		for(int i=1;i&lt;=n;++i)&#123;</span><br><span class="line">			cin&gt;&gt;a[i];</span><br><span class="line">			++b[a[i]];</span><br><span class="line">		&#125;</span><br><span class="line">		c[0]=b[0];</span><br><span class="line">		for(int i=0;i&lt;=n;++i)&#123;</span><br><span class="line">			if(i&gt;0)</span><br><span class="line">				c[i]=c[i-1]+b[i];</span><br><span class="line">			if(b[i]&gt;=2&amp;&amp;i&gt;0)</span><br><span class="line">				ans+=b[i]*(b[i]-1)/2*c[i-1];//1 类三角形的方案数</span><br><span class="line">			if(b[i]&gt;=3)</span><br><span class="line">				ans+=b[i]*(b[i]-1)*(b[i]-2)/6;//2 类三角形的方案数</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Solution/" rel="tag"># Solution</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/01/08/History%20in%20Time/GDKOI-2024-%E6%B2%B9%E5%AF%84/" rel="prev" title="GDKOI 2024 油寄">
+                  <i class="fa fa-angle-left"></i> GDKOI 2024 油寄
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/03/01/CF1923B%E9%A2%98%E8%A7%A3/" rel="next" title="CF1923B题解">
+                  CF1923B题解 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">44_FeiDing</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
