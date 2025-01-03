@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"44-feiding.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Week 1 Day 1 早上调题。 龙说 18:00 ~ 19:30 可以来，本来想 18:00 就来的，但是在家收东西，6 点才出发，到宿舍遇到了 shine，然后去机房。老师严厉谴责了我们不打比赛的做法。笑死了，我太菜了，每次都做不出来。 装了个 Fedora 和 VSCode 来码。 晚上回到宿舍，睡得挺爽。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TYOI Class C 2024夏令营 油寄">
+<meta property="og:url" content="https://44-feiding.github.io/2024/08/26/TYOI-Class-C-2024%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/index.html">
+<meta property="og:site_name" content="44_FeiDing&#39;s Blog">
+<meta property="og:description" content="Week 1 Day 1 早上调题。 龙说 18:00 ~ 19:30 可以来，本来想 18:00 就来的，但是在家收东西，6 点才出发，到宿舍遇到了 shine，然后去机房。老师严厉谴责了我们不打比赛的做法。笑死了，我太菜了，每次都做不出来。 装了个 Fedora 和 VSCode 来码。 晚上回到宿舍，睡得挺爽。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-26T07:11:02.000Z">
+<meta property="article:modified_time" content="2025-01-03T05:58:07.638Z">
+<meta property="article:author" content="44_FeiDing">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://44-feiding.github.io/2024/08/26/TYOI-Class-C-2024%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://44-feiding.github.io/2024/08/26/TYOI-Class-C-2024%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/","path":"2024/08/26/TYOI-Class-C-2024夏令营-油寄/","title":"TYOI Class C 2024夏令营 油寄"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>TYOI Class C 2024夏令营 油寄 | 44_FeiDing's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="44_FeiDing's Blog" type="application/atom+xml">
+<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">44_FeiDing's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">a weak OIer</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#week-1"><span class="nav-number">1.</span> <span class="nav-text">Week 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#day-1"><span class="nav-number">1.1.</span> <span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-2"><span class="nav-number">1.2.</span> <span class="nav-text">Day 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-3"><span class="nav-number">1.3.</span> <span class="nav-text">Day 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-4"><span class="nav-number">1.4.</span> <span class="nav-text">Day 4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-5"><span class="nav-number">1.5.</span> <span class="nav-text">Day 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-6"><span class="nav-number">1.6.</span> <span class="nav-text">Day 6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-7"><span class="nav-number">1.7.</span> <span class="nav-text">Day 7</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#week-2"><span class="nav-number">2.</span> <span class="nav-text">Week 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#day-1"><span class="nav-number">2.1.</span> <span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-2"><span class="nav-number">2.2.</span> <span class="nav-text">Day 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day3"><span class="nav-number">2.3.</span> <span class="nav-text">Day3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-4"><span class="nav-number">2.4.</span> <span class="nav-text">Day 4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-5"><span class="nav-number">2.5.</span> <span class="nav-text">Day 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-6"><span class="nav-number">2.6.</span> <span class="nav-text">Day 6</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#week-3"><span class="nav-number">3.</span> <span class="nav-text">Week 3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#day-1"><span class="nav-number">3.1.</span> <span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-2"><span class="nav-number">3.2.</span> <span class="nav-text">Day 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-3"><span class="nav-number">3.3.</span> <span class="nav-text">Day 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-4"><span class="nav-number">3.4.</span> <span class="nav-text">Day 4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-5"><span class="nav-number">3.5.</span> <span class="nav-text">Day 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-6"><span class="nav-number">3.6.</span> <span class="nav-text">Day 6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-7"><span class="nav-number">3.7.</span> <span class="nav-text">Day 7</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">集训总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">44_FeiDing</p>
+  <div class="site-description" itemprop="description">rubish hub</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/44-FeiDing" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;44-FeiDing" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:44feiding@gmail.com" title="E-Mail → mailto:44feiding@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/4Feiding34225" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;4Feiding34225" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://44-feiding.github.io/2024/08/26/TYOI-Class-C-2024%E5%A4%8F%E4%BB%A4%E8%90%A5-%E6%B2%B9%E5%AF%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="44_FeiDing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="44_FeiDing's Blog">
+      <meta itemprop="description" content="rubish hub">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="TYOI Class C 2024夏令营 油寄 | 44_FeiDing's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          TYOI Class C 2024夏令营 油寄
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-26 15:11:02" itemprop="dateCreated datePublished" datetime="2024-08-26T15:11:02+08:00">2024-08-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-01-03 13:58:07" itemprop="dateModified" datetime="2025-01-03T13:58:07+08:00">2025-01-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">记录</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="week-1">Week 1</h2>
+<h3 id="day-1">Day 1</h3>
+<p>早上调题。</p>
+<p>龙说 18:00 ~ 19:30 可以来，本来想 18:00 就来的，但是在家收东西，6 点才出发，到宿舍遇到了 shine，然后去机房。老师严厉谴责了我们不打比赛的做法。笑死了，我太菜了，每次都做不出来。</p>
+<p>装了个 Fedora 和 VSCode 来码。</p>
+<p>晚上回到宿舍，睡得挺爽。</p>
+<span id="more"></span>
+<h3 id="day-2">Day 2</h3>
+<p>今天打比赛。</p>
+<p>T1，随便手模几组小样例，水中水，欧拉筛板子。</p>
+<p>T2，记忆化 dfs 板子，没想到，我是 sb。</p>
+<p>T3，倍增循环链表，随便打了个暴力，30pts。</p>
+<p>T4，dp，写了个 dfs。</p>
+<p>rk17，被薄纱了。</p>
+<p>下午改题，其实根本没怎么改，去看了点 kmp 的题。</p>
+<p>先去踢了会球然后才去食饭，操场球门不对齐，我们几个人去搬球门，搬完之后在对齐的那一对门踢球的高中生走了，于是我们白搬了。</p>
+<p>晚上去体锻（体罚），回到宿舍结果跑太慢差点洗不上澡，这下吸取教训了。</p>
+<p>宿舍在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 楼，机房在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 楼，食堂在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 楼，每天 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn></mrow><annotation encoding="application/x-tex">80</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mord">0</span></span></span></span> 层楼，真是太爽了。</p>
+<h3 id="day-3">Day 3</h3>
+<p>lily 让我们给 E 班出题，我随便找了两道红，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn></mrow><annotation encoding="application/x-tex">30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">0</span></span></span></span> 分钟胡乱出完了。</p>
+<p>学字符串哈希，我前几天在改某场比赛的某道题时题解让我去学了 kmp，所以能用 kmp 就全用，挺简单。</p>
+<p>我配置好了我的 Vim，以后就用它了，VSCode 占用太高了。</p>
+<h3 id="day-4">Day 4</h3>
+<p>看到别人都出了恶心题，我也去 CF 抄了一道思维题来。</p>
+<p>今天学 kmp，如前所述，不难。</p>
+<p>字典树也还好。</p>
+<p>好奇怪，这几天的题怎么这么简单？</p>
+<p>我的座位被空调直吹，受不了，换了个座位，又得费时间装 Fedora 了。</p>
+<h3 id="day-5">Day 5</h3>
+<p>AC 自动机，难得要死，还好可以抄 ty_xyz 的代码。</p>
+<h3 id="day-6">Day 6</h3>
+<p>做学长题单，又水几道蓝紫，其他的加入任务计划。</p>
+<h3 id="day-7">Day 7</h3>
+<p>忘了发生了什么。</p>
+<p>哦，学了 <s>ty_xyz 拉车</s>马拉车，跟 kmp 一样简单。</p>
+<p>晚上回家<s>倒灌</s>腐文化课。</p>
+<p>这周 lily 说如果没有省一就要 AFO，完蛋了。</p>
+<hr>
+<h2 id="week-2">Week 2</h2>
+<h3 id="day-1">Day 1</h3>
+<p>状压，还行，就是 DP + 位运算。</p>
+<h3 id="day-2">Day 2</h3>
+<p>打比赛。</p>
+<p>T1T2 大水，T1 莫名其妙挂掉 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn></mrow><annotation encoding="application/x-tex">20</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span></span></span></span> 分，T2 没有想到双指针（在 GDKOI 是想到了但奇妙 0 分），T3 大模拟忘开 <code>long long</code> 挂 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn></mrow><annotation encoding="application/x-tex">40</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">0</span></span></span></span> 分，剩下 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>58</mn></mrow><annotation encoding="application/x-tex">58</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">8</span></span></span></span> 分不知道什么鬼，太简单，懒得改了。T4 有点难，不改了。</p>
+<p>被薄纱了。</p>
+<h3 id="day3">Day3</h3>
+<p>数位 DP，挺难的。</p>
+<h3 id="day-4">Day 4</h3>
+<p>矩阵快速幂，还行，但是我的矩阵 <code>struct</code> 打挂了，导致一直在调。</p>
+<p>Kane 用回了 Vim，CodingCow 开始用 Vim，现在机房就剩 ty_xyz 用 VSCode 了。</p>
+<h3 id="day-5">Day 5</h3>
+<p>CodingCow 想实现在 Vim 里的一键编译运行，但是他写的 Vim Script 和 Python 有 Bug，我让他帮我看题的公式，结果我帮他调完了他的 Bug 后他才去看题，害得我看了一早上的《C Primer Plus》。</p>
+<p>下午 CC 说要把插件发布到 Github 上，但是折腾了很久不知道怎么按照 Vim 插件规范来搞，所以就算了，我打算过几天重写一遍，反正也没十几行。这样才能用 Vim-Plug 来管理。</p>
+<p>明天 D 班有个人要来我们 C 班打比赛，完了，要被 D 班薄纱了。</p>
+<h3 id="day-6">Day 6</h3>
+<p>成功被 D 班薄纱。</p>
+<p>T1 莫名其妙挂 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn></mrow><annotation encoding="application/x-tex">20</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span></span></span></span> 分，T3 忘开 <code>long long</code> 挂 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn></mrow><annotation encoding="application/x-tex">40</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">0</span></span></span></span> 分，555。</p>
+<p>这周下了好多天雨，好几天踢不了球，希望下周别下雨。</p>
+<hr>
+<h2 id="week-3">Week 3</h2>
+<h3 id="day-1">Day 1</h3>
+<p>下雨。</p>
+<p>CC 把插件写好了，那我就不用写了，太好了。</p>
+<h3 id="day-2">Day 2</h3>
+<p>下雨。</p>
+<p>矩阵快速幂。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mo>×</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">13 \times 13</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">3</span></span></span></span> 的矩阵还是不会 doge</p>
+<h3 id="day-3">Day 3</h3>
+<p>下雨。</p>
+<p>今天继续和 D 班打比赛。</p>
+<p>T1，什么大水，随便搞个桶，切了。</p>
+<p>T23 都暴力。</p>
+<p>结果 T1 挂 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn></mrow><annotation encoding="application/x-tex">30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">0</span></span></span></span>，T2挂 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 分，T3 挂 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn></mrow><annotation encoding="application/x-tex">40</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">0</span></span></span></span>，我在挂分这方面真是无与伦比。</p>
+<h3 id="day-4">Day 4</h3>
+<p>下雨。</p>
+<p>树剖，摆烂。</p>
+<h3 id="day-5">Day 5</h3>
+<p>下雨。</p>
+<p>摆烂。</p>
+<p>一直下雨，只能打乒乓球了。<br>
+学校的楼不知道怎么建的，我们在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 楼，头顶就是天花板，走廊里全是漏下来的水。</p>
+<h3 id="day-6">Day 6</h3>
+<p>今天没下雨，总算踢上球了。</p>
+<p>今天 E 班在做我们出的题，B 班在和别的学校联机打离线 NOIP 模拟赛，我们在打大模拟。</p>
+<p>11:45 分的时候，楼下主校道的施工队挖到电线了，全断电了，E 班和 B 班的比赛代码没了，我们打到一半的大模拟也没了。我已经看到 E 班的人在讨论做法了，只能说下届 TYOI 水分极大。</p>
+<h3 id="day-7">Day 7</h3>
+<p>TYCPC。</p>
+<p>A，什么鬼，一看就不可做，看看 B。</p>
+<p>算了，还是认真看看 A 吧。</p>
+<p>诶，好像 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">y = d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span></span></span></span>，哦，那我会了，打完，提交，AC，看看成绩表：首A ？！</p>
+<p>LHJ，大水，随便过。</p>
+<p>D，题面这么鬼长，不会是大模拟吧。</p>
+<p>哦，小模拟啊，没事了。</p>
+<p>TLE？！</p>
+<p>换掉 <code>cin</code>，还 T？</p>
+<p>看来只好注释掉一部分，看看是不是它导致的 TLE。</p>
+<p>为什么一直 T 啊，我急眼了，交交交，一直交了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>17</mn></mrow><annotation encoding="application/x-tex">17</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">7</span></span></span></span> 发。</p>
+<blockquote>
+<p>如果标算太难请坚定信念，不如回头再看一眼题面。<br>
+——《膜你抄》</p>
+</blockquote>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>h</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>14</mn></msup></mrow><annotation encoding="application/x-tex">1 \le h \le 10^{14}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span></p>
+</blockquote>
+<p>我靠，没开 <code>long long</code>。</p>
+<p>我是傻逼。我是傻逼。我是傻逼。我是傻逼。我是傻逼。我是傻逼。我是傻逼。</p>
+<p>再看 E。</p>
+<p>我旁边两个人曰：这不就是求重心吗？怎么求重心来着？</p>
+<p>我心里幸灾乐祸：其实只用求直径。</p>
+<p>打完交：WA。</p>
+<p>调调调，过了。</p>
+<p>接下来就调戏旁边两个人，看着他们急眼，还是很快乐的。</p>
+<p>最后 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn></mrow><annotation encoding="application/x-tex">25</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span></span></span></span> 分钟去试着打了一下 FM，没过。（似乎我 M 的做法想对了，被我错误的 Hacker 给 Hack 了）</p>
+<p>因为罚时太多喜提 3 等，555，我错了，再也不急了。</p>
+<h2 id="集训总结">集训总结</h2>
+<p>我垫底了。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/@4FeiDing34225">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/08/22/P10893-%E9%A2%98%E8%A7%A3/" rel="prev" title="P10893 题解">
+                  <i class="fa fa-angle-left"></i> P10893 题解
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/10/21/OiClass%20PU2TI%20327%20%E5%98%A4%E5%98%A4%E7%9A%84%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91%E9%A2%98%E8%A7%A3/" rel="next" title="OiClass PU2TI 327 嘤嘤的珂朵莉树题解">
+                  OiClass PU2TI 327 嘤嘤的珂朵莉树题解 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">44_FeiDing</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
